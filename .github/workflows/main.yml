@@ -1,0 +1,14 @@
+name: Simple GitHub Actions Workflow
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  run-hello-message:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run greeting
+        run: echo "Hello, GitHub Actions!"
